@@ -27,7 +27,6 @@ Developed for **TY B.Sc. Computer Science Final Year Major Project**.
 7. [Default Demo Credentials](#default-demo-credentials)
 8. [Testing & Quality Assurance](#testing--quality-assurance)
 9. [Security & Privacy](#security--privacy)
-10. [Documentation Index](#documentation-index)
 
 ---
 
@@ -119,7 +118,7 @@ $$\text{Match \%} = (0.6 \times \text{Skill Overlap}) + (0.3 \times \text{Semant
 resume_analyze_ai/
 ├── docker-compose.yml              # Multi-container orchestration
 ├── package.json                    # Monorepo scripts
-├── .env.example & .gitignore
+├── .gitignore                      # Git exclusion rules
 ├── backend/                        # Node.js + Express backend
 │   ├── src/
 │   │   ├── config/                 # Environment & Mongo connection retry
@@ -139,15 +138,14 @@ resume_analyze_ai/
 │   │   ├── matching/               # Semantic similarity & job recommender
 │   │   └── data/                   # skills.json (60+ skills) & section_keywords.json
 │   └── tests/                      # Pytest & run_tests.py test suite
-├── frontend/                       # React 18 + TypeScript + Vite + Tailwind SPA
-│   └── src/
-│       ├── api/                    # Axios client with automatic 401 token refresh
-│       ├── components/             # Reusable UI (Button, Card, Table, Modal, ScoreGauge, SkillBadge)
-│       ├── layouts/                # AuthLayout, DashboardLayout
-│       ├── pages/                  # 16 distinct pages (Candidate, Recruiter, Admin)
-│       ├── routes/                 # Protected route table
-│       └── store/                  # Zustand in-memory auth store
-└── docs/                           # Full specification documentation (15 files)
+└── frontend/                       # React 18 + TypeScript + Vite + Tailwind SPA
+    └── src/
+        ├── api/                    # Axios client with automatic 401 token refresh
+        ├── components/             # Reusable UI (Button, Card, Table, Modal, ScoreGauge, SkillBadge)
+        ├── layouts/                # AuthLayout, DashboardLayout
+        ├── pages/                  # 16 distinct pages (Candidate, Recruiter, Admin)
+        ├── routes/                 # Protected route table
+        └── store/                  # Zustand in-memory auth store
 ```
 
 ---
@@ -258,28 +256,6 @@ Get-ChildItem -Path "backend" -Recurse -Filter *.js | ForEach-Object { node --ch
 - **RBAC Enforcement:** Route-level authorization guards for `candidate`, `recruiter`, and `admin`.
 - **Data Protection:** Structured Pino logs redact candidate contact details and raw resume text.
 - **Rate Limiting:** Global rate limit (100 req/min) and auth rate limit (10 attempts/min) using `express-rate-limit`.
-
----
-
-## Documentation Index
-
-The complete requirements, architectural diagrams, task trackers, and audit guides are stored in [`docs/`](docs/):
-
-- [`01_PRD.md`](docs/01_PRD.md) — Product Requirements Document
-- [`02_USER_STORIES.md`](docs/02_USER_STORIES.md) — User Stories & Acceptance Criteria
-- [`03_APP_FLOW.md`](docs/03_APP_FLOW.md) — User Journey & Screen Navigations
-- [`04_TECH_STACK.md`](docs/04_TECH_STACK.md) — Tech Stack & Constraints
-- [`05_ARCHITECTURE.md`](docs/05_ARCHITECTURE.md) — Microservice Architecture & Data Flow
-- [`06_DATABASE_SCHEMA.md`](docs/06_DATABASE_SCHEMA.md) — MongoDB Collection Schemas & Indexes
-- [`07_API_SPEC.md`](docs/07_API_SPEC.md) — REST API Endpoints Specification
-- [`08_BACKEND_STRUCTURE.md`](docs/08_BACKEND_STRUCTURE.md) — Express & FastAPI Layout
-- [`09_FRONTEND_GUIDELINES.md`](docs/09_FRONTEND_GUIDELINES.md) — React & Tailwind Guidelines
-- [`10_DESIGN_SYSTEM.md`](docs/10_DESIGN_SYSTEM.md) — Design Tokens, Colors, & Typography
-- [`11_RULES.md`](docs/11_RULES.md) — AI Development Guidelines
-- [`12_TASKS.md`](docs/12_TASKS.md) — Implementation Task Tracker
-- [`13_PROGRESS.md`](docs/13_PROGRESS.md) — Project Progress Changelog
-- [`14_TESTING.md`](docs/14_TESTING.md) — Test Plan & Verification Results
-- [`15_SECURITY.md`](docs/15_SECURITY.md) — Threat Model & Security Posture
 
 ---
 

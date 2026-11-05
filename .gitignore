@@ -12,6 +12,12 @@ node_modules/
 backend/.env
 nlp-service/.env
 frontend/.env
+.env.example
+backend/.env.example
+nlp-service/.env.example
+
+# Internal Documentation
+docs/
 
 # Build outputs
 dist/
