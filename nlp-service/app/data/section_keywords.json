@@ -1,0 +1,10 @@
+{
+  "education": ["education", "academic", "academics", "qualification", "qualifications", "degree", "university", "college", "school"],
+  "experience": ["experience", "work experience", "employment", "professional experience", "work history", "career", "employment history"],
+  "skills": ["skills", "technical skills", "technologies", "competencies", "expertise", "proficiencies", "core skills", "tech stack"],
+  "projects": ["projects", "personal projects", "academic projects", "portfolio", "work samples", "key projects"],
+  "certifications": ["certifications", "certificates", "courses", "training", "licenses", "achievements"],
+  "summary": ["summary", "objective", "profile", "about", "overview", "career objective", "professional summary"],
+  "contact": ["contact", "email", "phone", "linkedin", "github", "address", "phone number"]
+}
+
